@@ -3,3 +3,6 @@ node_modules
 .env.local
 .agent-serve
 memory
+inbox/*
+!inbox/.gitkeep
+bot/sandbox/workspace/*.mp4

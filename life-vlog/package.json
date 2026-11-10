@@ -5,7 +5,8 @@
   "description": "agent project: life-vlog",
   "scripts": {
     "check": "tsc --noEmit",
-    "dev": "agent-sdk dev"
+    "dev": "agent-sdk dev",
+    "draft": "node scripts/draft.mjs"
   },
   "dependencies": {
     "@grok/agent-sdk": "^0.6.0",
