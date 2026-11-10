@@ -6,3 +6,4 @@ memory
 inbox/*
 !inbox/.gitkeep
 bot/sandbox/workspace/*.mp4
+out/

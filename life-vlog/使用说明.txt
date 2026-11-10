@@ -1,0 +1,7 @@
+1. 安装 Node.js 22 或更新版本，以及 ffmpeg。
+2. 把视频放进 inbox。文件名可以用中文。
+3. 文案：Mac 双击「开始.command」，Windows 双击「开始.bat」。
+4. 成片：Mac 双击「做成片.command」，Windows 双击「做成片.bat」。
+5. 只放进 inbox 时，成片按文件名排序。要指定顺序，在终端执行：
+   npm run vlog -- 第一段.mp4 第二段.mp4
+6. 成片在 out/vlog.mp4，是 1080x1920。第一次登录 Cursor 只为了生成文案。成片不上传抖音。
