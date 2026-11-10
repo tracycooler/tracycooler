@@ -6,7 +6,7 @@
 
 1. 收片：`intake-clips` 检查素材。单条超过 15 分钟就拒绝。
 2. 选片和文案：模型排镜头顺序，写 60 到 120 字口播、标题和 2 到 4 个话题。
-3. 成片：`npm run vlog` 按顺序把几段视频裁成 1080x1920，再接成一条。画面用本机 ffmpeg 处理。
+3. 成片：`npm run vlog` 先剪掉每段里的静音，再把留下的画面裁成 1080x1920，段与段之间做 0.35 秒淡化。要指定入点出点，在 `inbox/剪辑.txt` 写「文件名 开始秒 结束秒」。画面用本机 ffmpeg 处理。
 4. 确认：人在当次对话里明确同意后，才允许发布。
 5. 发布：`publish-douyin` 调用官方接口。同一个 `draftId` 只发布一次。
 
@@ -14,7 +14,7 @@
 
 ## 用法
 
-把视频放进 `inbox`，在 `life-vlog` 目录执行 `npm run draft` 得到文案。执行 `npm run vlog` 把这几段接成一条竖版成片，输出 `out/vlog.mp4`。传入路径时按参数顺序拼接：`npm run vlog -- ~/早餐.mp4 ~/散步.mp4`。只放进 inbox 时按文件名排序。
+把视频放进 `inbox`，在 `life-vlog` 目录执行 `npm run draft` 得到文案。执行 `npm run vlog` 剪辑并输出 `out/vlog.mp4`。传入路径时按参数顺序：`npm run vlog -- ~/早餐.mp4 ~/散步.mp4`。只放进 inbox 时按文件名排序。
 
 ## 模型
 
